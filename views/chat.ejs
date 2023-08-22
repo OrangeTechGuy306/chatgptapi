@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <div class="chatContainer">
+
+        <div class="chatBox">
+            <% if(chat || message){ %>
+            <p class="bot"> <%- chat %></p>
+            <p class="client"> <%- chat.message %></p>
+            <% } %>
+        </div>
+
+        <div class="msgContainer"> 
+            <form action="/chat" method="post">
+                <div class="inputContainer">
+                    <input type="text" name="message" class="chatInput" placeholder="Type your message here...">
+                    <button type="submit">
+                        <img src="/images/send.png" class="sendIcon">
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    
+    <script>
+        // document.form.addEventListener("submit",(e)=>e.preventDefault())
+    </script>
+</body>
+</html>
